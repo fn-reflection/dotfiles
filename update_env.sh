@@ -10,7 +10,9 @@ cd $(dirname $0)
 git submodule update --init --recursive #initlize external repository
 
 ##prezto
-#force_update_sym_link .zprezto
+if [ ! -e ~/.zprezto ]; then
+  force_update_sym_link .zprezto
+fi
 force_update_sym_link .zpreztorc
 ##zsh
 force_update_sym_link .zlogin
