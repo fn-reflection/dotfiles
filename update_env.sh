@@ -23,3 +23,5 @@ force_update_sym_link .zshrc
 
 force_update_sym_link .vimrc
 force_update_sym_link .tmux.conf
+
+force_update_sym_link .ipython/profile_default/startup
