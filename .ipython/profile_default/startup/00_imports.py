@@ -1,51 +1,53 @@
+# python standard modules
 import ast
-import os
-import sys
-import math
-import io
-import re
-from pathlib import Path
-import csv
-import json
-import pickle
-import pdb
-import traceback
 import collections
-import typing
-import threading
-from typing import List,Dict,Tuple,Deque,Callable
-import time
-import glob
+import csv
 from datetime import datetime
-import psycopg2
+import glob
+import io
+import itertools
+import json
+import math
+import os
+from pathlib import Path
+import pdb
+import pickle
+import sys
+import re
+import threading
+import time
+import traceback
+from typing import List,Dict,Tuple,Deque,Callable
+
+# third-party libraries
+import dill
+from IPython.lib.backgroundjobs import BackgroundJobManager
+import numba
+import numba.cuda
 import numpy as np
 import pandas as pd
 from pandas import Series,DataFrame,read_csv,read_pickle
-import numba
-import numba.cuda
-import vaex
-import dill
+import psycopg2
 from sortedcontainers import SortedDict
-from IPython.lib.backgroundjobs import BackgroundJobManager
+import vaex
+
+# my public libraries
 import fn_reflection
-import lenv
-import lcred
+
+# my private libraries
+import lbf
 import lconn
-import lpandas
-import lpandas.pyutil as lpy
-import lpandas.nputil as lnp
-import lpandas.dfutil as ldf
+import lcred
+import lenv
 import liberate
 import liberate.dukascopy as dukascopy
 import liberate.backtest as lbt
 import liberate.search as lsearch
 import liberate.signal as lsignal
-import yf
-import lbf
 import liquid
+import lpandas
+import lpandas.pyutil as lpy
+import lpandas.nputil as lnp
+import lpandas.dfutil as ldf
 import ltrade
-
-def print_all(df,nrow=None,ncol=None):
-    df_N,df_M = df.shape
-    with pd.option_context('display.max_rows', min(df_N,nrow) if nrow else df_N, 'display.max_columns', min(df_M,ncol) if ncol else df_M):
-        print (df)
+import yf
