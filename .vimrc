@@ -1,5 +1,5 @@
 let g:hybrid_use_iTerm_colors = 1
-colorscheme hybrid
+colorscheme dark_plus
 syntax enable
 set number
 set cursorline
