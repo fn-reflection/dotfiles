@@ -30,6 +30,3 @@ fi
 if [ ! -e ~/.vim/colors ]; then
   force_update_sym_link .vim/colors
 fi
-if [ ! -e ~/.vim/vim-hybrid ]; then
-  force_update_sym_link .vim/vim-hybrid
-fi
