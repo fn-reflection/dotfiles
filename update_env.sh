@@ -30,3 +30,6 @@ fi
 if [ ! -e ~/.vim/colors ]; then
   force_update_sym_link .vim/colors
 fi
+
+
+force_update_sym_link .jupyter/jupyter_notebook_config.py
