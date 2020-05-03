@@ -13,7 +13,10 @@ git submodule update --init --recursive #initlize external repository
 #force_update_sym_link .zprezto
 force_update_sym_link .zpreztorc
 ##zsh
+force_update_sym_link .zlogin
+force_update_sym_link .zlogout
 force_update_sym_link .zprofile
+force_update_sym_link .zshenv
 force_update_sym_link .zshrc
 
 force_update_sym_link .vimrc
