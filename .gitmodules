@@ -1,0 +1,6 @@
+[submodule ".zprezto"]
+	path = .zprezto
+	url = https://github.com/sorin-ionescu/prezto
+[submodule "cool-peco"]
+	path = cool-peco
+	url = https://github.com/ryoppy/cool-peco
