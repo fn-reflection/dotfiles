@@ -1,0 +1,1 @@
+/home/lb/dotfiles/.zprezto/runcoms/zlogout
