@@ -6,6 +6,14 @@ function force_update_sym_link() {
     ln -sf $SCRIPT_DIR/$path ~/$path
 }
 
+function update_sym_link() {
+    SCRIPT_DIR=$(pwd)
+    path=$1
+    if [ ! -e ~/$path ]; then
+      force_update_sym_link $path
+    fi
+}
+
 cd $(dirname $0)
 git submodule update --init --recursive #initlize external repository
 
@@ -22,14 +30,9 @@ force_update_sym_link .zshenv
 force_update_sym_link .zshrc
 
 force_update_sym_link .vimrc
+update_sym_link .vim/colors
 force_update_sym_link .tmux.conf
 
-if [ ! -e ~/.ipython/profile_default/startup ]; then
-  force_update_sym_link .ipython/profile_default/startup
-fi
-if [ ! -e ~/.vim/colors ]; then
-  force_update_sym_link .vim/colors
-fi
-
+update_sym_link .ipython/profile_default/startup
 
 force_update_sym_link .jupyter/jupyter_notebook_config.py
