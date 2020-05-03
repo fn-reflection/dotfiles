@@ -1,0 +1,4 @@
+%load_ext memory_profiler
+%load_ext line_profiler
+%reload_ext autoreload
+%autoreload 2
