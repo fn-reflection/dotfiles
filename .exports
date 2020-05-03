@@ -1,6 +1,0 @@
-export PATH=/var/lib/liberate/browser_engines:$PATH
-export PATH=~/aur/jdk1.8.0_241/bin:$PATH
-export PATH=~/.gem/ruby/2.7.0/bin:$PATH
-export LLVM_CONFIG=/usr/bin/llvm-config
-export DISPLAY=10.10.10.2:0.0
-export TERM=xterm-256color

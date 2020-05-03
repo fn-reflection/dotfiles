@@ -14,16 +14,7 @@ if [[ -z "$LANG" ]]; then
 fi
 
 # Paths
-function sym_link_dest_dir(){
-    if [ -L $1 ] ; then
-        printf "%s" $(cd $(dirname $(readlink $1)); pwd)
-    else
-        printf "%s" $(cd $(dirname $1); pwd)
-    fi
-}
 
-SCRIPT_DIR=$(sym_link_dest_dir $0) #this script(repository) directory path
-source $SCRIPT_DIR/.exports
 
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
