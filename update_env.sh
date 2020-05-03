@@ -24,4 +24,12 @@ force_update_sym_link .zshrc
 force_update_sym_link .vimrc
 force_update_sym_link .tmux.conf
 
-force_update_sym_link .ipython/profile_default/startup
+if [ ! -e ~/.ipython/profile_default/startup ]; then
+  force_update_sym_link .ipython/profile_default/startup
+fi
+if [ ! -e ~/.vim/colors ]; then
+  force_update_sym_link .vim/colors
+fi
+if [ ! -e ~/.vim/vim-hybrid ]; then
+  force_update_sym_link .vim/vim-hybrid
+fi
