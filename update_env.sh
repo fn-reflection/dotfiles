@@ -18,10 +18,9 @@ cd $(dirname $0)
 git submodule update --init --recursive #initlize external repository
 
 ##prezto
-if [ ! -e ~/.zprezto ]; then
-  force_update_sym_link .zprezto
-fi
+update_sym_link .zprezto
 force_update_sym_link .zpreztorc
+
 ##zsh
 force_update_sym_link .zlogin
 force_update_sym_link .zlogout
@@ -29,10 +28,9 @@ force_update_sym_link .zprofile
 force_update_sym_link .zshenv
 force_update_sym_link .zshrc
 
+#others
 force_update_sym_link .vimrc
 update_sym_link .vim/colors
 force_update_sym_link .tmux.conf
-
 update_sym_link .ipython/profile_default/startup
-
 force_update_sym_link .jupyter/jupyter_notebook_config.py
