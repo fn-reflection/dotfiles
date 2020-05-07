@@ -9,3 +9,4 @@ if [ -e /usr/local/share/zsh-completions ]; then
 fi
 
 alias g='git'
+alias -g dev='development'
