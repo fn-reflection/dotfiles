@@ -8,6 +8,4 @@ if [ -e /usr/local/share/zsh-completions ]; then
         fpath=(/usr/local/share/zsh-completions $fpath)
 fi
 
-alias gb='git branch'
-alias gch='git checkout'
-alias gl='git log'
+alias g='git'
