@@ -43,3 +43,4 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
 fi
 
 eval "$(nodenv init -)"'
+eval "$(rbenv init -)"
