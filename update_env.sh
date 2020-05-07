@@ -28,9 +28,16 @@ force_update_sym_link .zprofile
 force_update_sym_link .zshenv
 force_update_sym_link .zshrc
 
-#others
+#vim
 force_update_sym_link .vimrc
 update_sym_link .vim/colors
+
+##git
+force_update_sym_link .gitconfig
+
+##tmux
 force_update_sym_link .tmux.conf
+
+##python
 update_sym_link .ipython/profile_default/startup
 force_update_sym_link .jupyter/jupyter_notebook_config.py
