@@ -41,3 +41,7 @@ force_update_sym_link .tmux.conf
 ##python
 update_sym_link .ipython/profile_default/startup
 force_update_sym_link .jupyter/jupyter_notebook_config.py
+
+
+##python
+force_update_sym_link .pryrc
