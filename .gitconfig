@@ -6,17 +6,17 @@
     p = pull
     
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path =
     
 [mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+    cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
     
 [user]
-	email = fujitanaoki0718@gmail.com
-	name = NaokiFujita
+    email = fujitanaoki0718@gmail.com
+    name = NaokiFujita
 
 [diff "ansible-vault"]
-  textconv = ansible-vault view
-  cachetextconv = true
+    textconv = ansible-vault view
+    cachetextconv = true
