@@ -16,3 +16,7 @@
 [user]
 	email = fujitanaoki0718@gmail.com
 	name = NaokiFujita
+
+[diff "ansible-vault"]
+  textconv = ansible-vault view
+  cachetextconv = true
