@@ -40,8 +40,6 @@ import lconn
 import lcred
 import lenv
 import liberate
-import liberate.dukascopy as dukascopy
-import liberate.backtest as lbt
 import liberate.search as lsearch
 import liberate.signal as lsignal
 import liquid
