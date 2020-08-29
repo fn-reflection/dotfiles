@@ -7,7 +7,7 @@ function force_update_sym_link() {
 }
 
 cd $(dirname $0)
-git submodule update --init --recursive #initlize external repository
+git submodule update --init --recursive #initialize external repository
 
 ##prezto
 if [ ! -e ~/.zprezto ]; then
@@ -30,3 +30,6 @@ fi
 if [ ! -e ~/.vim/colors ]; then
   force_update_sym_link .vim/colors
 fi
+
+force_update_sym_link .config/pep8
+force_update_sym_link .config/pylintrc
