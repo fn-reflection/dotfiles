@@ -2,3 +2,5 @@
 disable=
     C0103,C0114,C0115,C0116,
     W0621,W1202
+[FORMAT]
+max-line-length=120
