@@ -44,3 +44,4 @@ fi
 
 eval "$(nodenv init -)"
 eval "$(rbenv init -)"
+eval `ssh-agent` 
