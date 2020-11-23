@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 import pdb
 import pickle
+import stringcase
 import sys
 import re
 import threading
@@ -40,12 +41,12 @@ import fn_reflection
 from fn_reflection.typed_dict import *
 
 # my private libraries
+import lactivemodel
 import lbf
 import lconn
 import lcred
 import lenv
 import liberate
-import liberate.dukascopy as dukascopy
 import liberate.search as lsearch
 import liberate.signal as lsignal
 import liquid
