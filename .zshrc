@@ -23,4 +23,4 @@ RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 alias g='git'
 alias -g dev='development'
 
-export PATH="$HOME/.rustup/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
