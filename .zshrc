@@ -33,7 +33,8 @@ function ipy() {
 }
 
 function jup() {
+    init_dir=$1
     cd ~/pj/ipython_env
-    poetry run python -m jupyter notebook
+    poetry run python -m jupyter notebook $init_dir
     cd - > /dev/null
 }
