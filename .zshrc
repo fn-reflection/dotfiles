@@ -25,3 +25,9 @@ alias -g dev='development'
 
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
+
+function ipy() {
+    cd ~/pj/ipython_env
+    poetry run python -m IPython
+    cd - > /dev/null
+}
