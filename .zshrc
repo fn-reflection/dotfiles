@@ -31,3 +31,9 @@ function ipy() {
     poetry run python -m IPython
     cd - > /dev/null
 }
+
+function jup() {
+    cd ~/pj/ipython_env
+    poetry run python -m jupyter notebook
+    cd - > /dev/null
+}
