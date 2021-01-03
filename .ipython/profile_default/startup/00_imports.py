@@ -131,3 +131,8 @@ try:
     import ltrade
 except ModuleNotFoundError:
     pass
+
+# notebookファイルの上にプロジェクトディレクトリがあると想定しておりそれをjupyterでreloadできるようにしたい。
+# あまりよくない書き方だが使えはする
+if Path.cwd().name == 'notebook':
+    sys.path.append("../")
