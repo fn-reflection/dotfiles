@@ -24,3 +24,4 @@ alias g='git'
 alias -g dev='development'
 
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.poetry/bin:$PATH"
