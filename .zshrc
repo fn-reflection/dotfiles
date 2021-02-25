@@ -21,6 +21,7 @@ RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
 ## aliases
 alias g='git'
+alias t='tmux'
 alias -g dev='development'
 
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -54,4 +55,19 @@ then
     then
         eval "$(nodenv init -)"
     fi
+fi
+
+if [ -e "$HOME/.nodenv" ]
+then
+    export PATH="$HOME/.nodenv/bin:$PATH"
+    if command -v nodenv 1>/dev/null 2>&1
+    then
+        eval "$(nodenv init -)"
+    fi
+fi
+
+
+if command -v rbenv 1>/dev/null 2>&1
+then
+      eval "$(rbenv init -)"
 fi
