@@ -1,12 +1,19 @@
+[user]
+	email = fujitanaoki0718@gmail.com
+	name = Naoki Fujita
+
 [alias]
     b = branch
     bm = blame
     c = checkout
     cm = commit
+    cp = cherry-pick
     d = diff
     f = fetch
     g = grep
-    l = log
+    l = log --oneline
+    lg = log --oneline --graph --decorate
+    ls = ls-files
     s = status
     st = stash
     p = pull
@@ -19,8 +26,6 @@
     cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
     trustExitCode = true
     
-[user]
-	email = fujitanaoki0718@gmail.com
-	name = Naoki Fujita
 [pull]
 	rebase = false
+    prune = true
