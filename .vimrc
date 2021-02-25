@@ -1,9 +1,6 @@
-let g:hybrid_use_iTerm_colors = 1
-colorscheme hybrid
 syntax enable
 set number
 set cursorline
-set cursorcolumn
 set virtualedit=onemore
 set smartindent
 set visualbell
