@@ -1,4 +1,12 @@
-%load_ext memory_profiler
-%load_ext line_profiler
+try:
+    %load_ext memory_profiler
+except ModuleNotFoundError:
+    pass
+
+try:
+    %load_ext line_profiler
+except ModuleNotFoundError:
+    pass
+
 %reload_ext autoreload
 %autoreload 2

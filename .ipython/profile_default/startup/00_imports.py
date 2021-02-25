@@ -21,37 +21,118 @@ import traceback
 from typing import List, Dict, Tuple, Deque, Callable
 
 # third-party libraries
-import dill
-from IPython.lib.backgroundjobs import BackgroundJobManager
-import matplotlib.pyplot as plt
-import numba
-import numba.cuda
-import numpy as np
-import pandas as pd
-from pandas import Series, DataFrame, read_csv, read_pickle
-import plotly
-from plotly.subplots import make_subplots
-import psycopg2
-from sortedcontainers import SortedDict
-import vaex
+try:
+    import stringcase
+except ModuleNotFoundError:
+    pass
+
+try:
+    import dill
+except ModuleNotFoundError:
+    pass
+
+try:
+    from IPython.lib.backgroundjobs import BackgroundJobManager
+except ModuleNotFoundError:
+    pass
+
+try:
+    import matplotlib.pyplot as plt
+except ModuleNotFoundError:
+    pass
+
+try:
+    import numba
+    import numba.cuda
+except ModuleNotFoundError:
+    pass
+
+try:
+    import numpy as np
+except ModuleNotFoundError:
+    pass
+
+try:
+    import pandas as pd
+    from pandas import Series, DataFrame, read_csv, read_pickle
+except ModuleNotFoundError:
+    pass
+
+try:
+    import plotly
+    from plotly.subplots import make_subplots
+except ModuleNotFoundError:
+    pass
+
+try:
+    import psycopg2
+except ModuleNotFoundError:
+    pass
+
+try:
+    from sortedcontainers import SortedDict
+except ModuleNotFoundError:
+    pass
+
+try:
+    import vaex
+except ModuleNotFoundError:
+    pass
 
 # my public libraries
-import fn_reflection
+try:
+    import fn_reflection
+    from fn_reflection.typed_dict import *
+except ModuleNotFoundError:
+    pass
 
 # my private libraries
-import lbf
-import lconn
-import lcred
-import lenv
-import liberate
-import liberate.dukascopy as dukascopy
-import liberate.backtest as lbt
-import liberate.search as lsearch
-import liberate.signal as lsignal
-import liquid
-import lpandas
-import lpandas.pyutil as lpy
-import lpandas.nputil as lnp
-import lpandas.dfutil as ldf
-import ltrade
-import yf
+try:
+    import lactivemodel
+except ModuleNotFoundError:
+    pass
+
+try:
+    import lbf
+except ModuleNotFoundError:
+    pass
+
+try:
+    import lconn
+except ModuleNotFoundError:
+    pass
+
+try:
+    import lcred
+except ModuleNotFoundError:
+    pass
+
+try:
+    import lenv
+except ModuleNotFoundError:
+    pass
+
+try:
+    import liberate
+    import liberate.search as lsearch
+    import liberate.signal as lsignal
+except ModuleNotFoundError:
+    pass
+
+try:
+    import lpandas
+    import lpandas.pyutil as lpy
+    import lpandas.nputil as lnp
+    import lpandas.dfutil as ldf
+except ModuleNotFoundError:
+    pass
+
+try:
+    import ltrade
+except ModuleNotFoundError:
+    pass
+
+# notebookファイルの上にプロジェクトディレクトリがあると想定しておりそれをjupyterでreloadできるようにしたい。
+# あまりよくない書き方だが使えはする
+if Path.cwd().name == 'notebook':
+    sys.path.append("../")

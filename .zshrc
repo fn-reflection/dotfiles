@@ -22,3 +22,26 @@ RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 ## aliases
 alias g='git'
 alias -g dev='development'
+
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.poetry/bin:$PATH"
+
+function ipy() {
+    env_dir=$1
+    if [ -z "$env_dir" ]; then
+      env_dir=~/pj/ipython_env
+    fi
+    cd $env_dir > /dev/null
+    poetry run python -m IPython
+    cd - > /dev/null
+}
+
+function jup() {
+    env_dir=$1
+    if [ -z "$env_dir" ]; then
+      env_dir=~/pj/ipython_env
+    fi
+    cd $env_dir > /dev/null
+    poetry run python -m jupyter notebook
+    cd - > /dev/null
+}
