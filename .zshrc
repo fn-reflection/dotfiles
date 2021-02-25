@@ -25,6 +25,7 @@ alias -g dev='development'
 
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 
 function ipy() {
     env_dir=$1
@@ -45,3 +46,12 @@ function jup() {
     poetry run python -m jupyter notebook
     cd - > /dev/null
 }
+
+if [ -e "$HOME/.nodenv" ]
+then
+    export PATH="$HOME/.nodenv/bin:$PATH"
+    if command -v nodenv 1>/dev/null 2>&1
+    then
+        eval "$(nodenv init -)"
+    fi
+fi
