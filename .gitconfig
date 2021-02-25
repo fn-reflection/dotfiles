@@ -1,5 +1,6 @@
 [alias]
     b = branch
+    bm = blame
     c = checkout
     cm = commit
     st = status
