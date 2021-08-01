@@ -14,11 +14,13 @@
     "[vue]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
+    "css.validate": false,
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.maxComputationTime": 0,
     "diffEditor.renderSideBySide": false,
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true
     },
     "editor.fontFamily": "'Ricty Diminished', Menlo, Monaco, 'Courier New', monospace",
     "editor.minimap.enabled": false,
@@ -32,11 +34,11 @@
         "vue"
     ],
     "files.exclude": {
-        "**/__pycache__ ": true,
         "**/.classpath": true,
         "**/.factorypath": true,
         "**/.project": true,
-        "**/.settings": true
+        "**/.settings": true,
+        "**/__pycache__ ": true
     },
     "git.confirmSync": false,
     "git.detectSubmodulesLimit": 30,
@@ -54,6 +56,7 @@
     "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
     "java.project.importHint": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
+    "less.validate": false,
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
@@ -64,12 +67,12 @@
     "rust-analyzer.diagnostics.disabled": [
         "unresolved-macro-call"
     ],
+    "scss.validate": false,
     "solargraph.checkGemVersion": false,
     "solargraph.diagnostics": true,
     "solargraph.formatting": true,
     "solargraph.useBundler": true,
     "terminal.external.osxExec": "iTerm.app",
-    "window.zoomLevel": 2,
     "workbench.colorCustomizations": {
         "editorError.foreground": "#111111",
         "editorInfo.foreground": "#555555",
