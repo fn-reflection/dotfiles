@@ -27,5 +27,5 @@ function setting_json_dir() {
 
 cd "$(dirname "$0")" || return
 link_to="$(pwd)"/.vscode/settings.json
-link_from=$(setting_json_dir $(current_os))
+link_from="$(setting_json_dir $(current_os))"/settings.json
 ln -sf "$link_to" "$link_from" 
