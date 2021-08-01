@@ -15,6 +15,7 @@
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
     "css.validate": false,
+    "debug.inlineValues": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.maxComputationTime": 0,
     "diffEditor.renderSideBySide": false,
@@ -22,7 +23,7 @@
         "source.fixAll.eslint": true,
         "source.fixAll.stylelint": true
     },
-    "editor.fontFamily": "'Ricty Diminished', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'Ricty Diminished', Consolas, 'Courier New', monospace",
     "editor.minimap.enabled": false,
     "editor.suggestSelection": "first",
     "eslint.format.enable": true,
@@ -33,12 +34,15 @@
         "typescriptreact",
         "vue"
     ],
+    "extensions.ignoreRecommendations": false,
+    "files.eol": "\n",
     "files.exclude": {
+        "**/*.egg-info": true,
+        "**/.cache": true,
         "**/.classpath": true,
         "**/.factorypath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/__pycache__ ": true
+        "**/.pytest_cache": true,
+        "**/__pycache__": true
     },
     "git.confirmSync": false,
     "git.detectSubmodulesLimit": 30,
@@ -63,7 +67,11 @@
     },
     "python.defaultInterpreterPath": "/usr/bin/python",
     "python.languageServer": "Pylance",
-    "redhat.telemetry.enabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "redhat.telemetry.enabled": false,
     "rust-analyzer.diagnostics.disabled": [
         "unresolved-macro-call"
     ],
@@ -73,12 +81,13 @@
     "solargraph.formatting": true,
     "solargraph.useBundler": true,
     "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontFamily": "'Ricty Diminished', Consolas, 'Courier New', monospace",
     "workbench.colorCustomizations": {
         "editorError.foreground": "#111111",
         "editorInfo.foreground": "#555555",
         "editorWarning.foreground": "#000000"
     },
-    "workbench.colorTheme": "Solarized Dark",
+    "workbench.colorTheme": "Default Dark+",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
