@@ -1,0 +1,95 @@
+{
+    "[javascript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[rust]": {
+        "editor.defaultFormatter": "matklad.rust-analyzer"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "css.validate": false,
+    "debug.inlineValues": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.maxComputationTime": 0,
+    "diffEditor.renderSideBySide": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true
+    },
+    "editor.fontFamily": "'Ricty Diminished', Consolas, 'Courier New', monospace",
+    "editor.minimap.enabled": false,
+    "editor.suggestSelection": "first",
+    "eslint.format.enable": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "vue"
+    ],
+    "extensions.ignoreRecommendations": false,
+    "files.eol": "\n",
+    "files.exclude": {
+        "**/*.egg-info": true,
+        "**/.cache": true,
+        "**/.classpath": true,
+        "**/.factorypath": true,
+        "**/.pytest_cache": true,
+        "**/__pycache__": true
+    },
+    "git.confirmSync": false,
+    "git.detectSubmodulesLimit": 30,
+    "git.enableSmartCommit": true,
+    "git.suggestSmartCommit": false,
+    "gitlens.menus": {
+        "editorGroup": {
+            "blame": false,
+            "compare": false
+        }
+    },
+    "gitlens.mode.statusBar.enabled": false,
+    "java.debug.settings.console": "internalConsole",
+    "java.format.settings.profile": "GoogleStyle",
+    "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+    "java.project.importHint": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "less.validate": false,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "python.defaultInterpreterPath": "/usr/bin/python",
+    "python.languageServer": "Pylance",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "redhat.telemetry.enabled": false,
+    "rust-analyzer.diagnostics.disabled": [
+        "unresolved-macro-call"
+    ],
+    "scss.validate": false,
+    "solargraph.checkGemVersion": false,
+    "solargraph.diagnostics": true,
+    "solargraph.formatting": true,
+    "solargraph.useBundler": true,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontFamily": "'Ricty Diminished', Consolas, 'Courier New', monospace",
+    "workbench.colorCustomizations": {
+        "editorError.foreground": "#111111",
+        "editorInfo.foreground": "#555555",
+        "editorWarning.foreground": "#000000"
+    },
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "workbench.startupEditor": "newUntitledFile"
+}
