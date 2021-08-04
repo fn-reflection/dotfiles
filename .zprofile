@@ -14,7 +14,10 @@ if [[ -z "$LANG" ]]; then
 fi
 
 # Paths
-
+# .zprofile
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
