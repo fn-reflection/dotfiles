@@ -57,12 +57,11 @@ then
     fi
 fi
 
-if [ -e "$HOME/.nodenv" ]
+if [ -e "$HOME/.pyenv" ]
 then
-    export PATH="$HOME/.nodenv/bin:$PATH"
-    if command -v nodenv 1>/dev/null 2>&1
+    if command -v pyenv 1>/dev/null 2>&1
     then
-        eval "$(nodenv init -)"
+        eval "$(pyenv init -)"
     fi
 fi
 
