@@ -21,8 +21,6 @@ RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
 ## aliases
 alias g='git'
-alias t='tmux'
-alias -g dev='development'
 
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
