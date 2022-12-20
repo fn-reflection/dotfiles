@@ -5,25 +5,19 @@
     "[json]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
-    "[rust]": {
-        "editor.defaultFormatter": "matklad.rust-analyzer"
-    },
     "[typescript]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
-    "[vue]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-    },
     "css.validate": false,
-    "debug.inlineValues": true,
+    "debug.inlineValues": "on",
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.maxComputationTime": 0,
     "diffEditor.renderSideBySide": false,
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true,
-        "source.fixAll.stylelint": true
+        "source.fixAll.eslint": true
     },
     "editor.fontFamily": "'Ricty Diminished', Consolas, 'Courier New', monospace",
+    "editor.inlineSuggest.enabled": true,
     "editor.minimap.enabled": false,
     "editor.suggestSelection": "first",
     "eslint.format.enable": true,
@@ -31,8 +25,7 @@
         "javascript",
         "javascriptreact",
         "typescript",
-        "typescriptreact",
-        "vue"
+        "typescriptreact"
     ],
     "extensions.ignoreRecommendations": false,
     "files.eol": "\n",
@@ -41,7 +34,9 @@
         "**/.cache": true,
         "**/.classpath": true,
         "**/.factorypath": true,
+        "**/.project": true,
         "**/.pytest_cache": true,
+        "**/.settings": true,
         "**/__pycache__": true
     },
     "git.confirmSync": false,
@@ -55,12 +50,20 @@
         }
     },
     "gitlens.mode.statusBar.enabled": false,
-    "java.debug.settings.console": "internalConsole",
     "java.format.settings.profile": "GoogleStyle",
     "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
     "java.project.importHint": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "less.validate": false,
+    "launch": {
+        "configurations": [
+            {
+                "name": "Attach with rdbg",
+                "request": "attach",
+                "type": "rdbg"
+            }
+        ],
+        "version": "0.2.0"
+    },
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
@@ -69,19 +72,20 @@
     "python.languageServer": "Pylance",
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
-    "python.testing.nosetestsEnabled": false,
     "python.testing.pytestEnabled": true,
     "redhat.telemetry.enabled": false,
     "rust-analyzer.diagnostics.disabled": [
         "unresolved-macro-call"
     ],
+    "scss.lint.unknownAtRules": "ignore",
     "scss.validate": false,
     "solargraph.checkGemVersion": false,
     "solargraph.diagnostics": true,
     "solargraph.formatting": true,
-    "solargraph.useBundler": true,
-    "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.fontFamily": "'Ricty Diminished', Consolas, 'Courier New', monospace",
+    "terminal.integrated.scrollback": 50000,
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    "window.zoomLevel": 1,
     "workbench.colorCustomizations": {
         "editorError.foreground": "#111111",
         "editorInfo.foreground": "#555555",
@@ -90,6 +94,5 @@
     "workbench.colorTheme": "Default Dark+",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
-    },
-    "workbench.startupEditor": "newUntitledFile"
+    }
 }
