@@ -5,6 +5,8 @@ if [ -e /usr/local/share/zsh-completions ]; then
         fpath=(/usr/local/share/zsh-completions $fpath)
 fi
 
+autoload -U compinit; compinit;
+
 ## always show current branch via RPROMPT
 autoload -Uz vcs_info
 setopt prompt_subst
