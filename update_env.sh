@@ -15,11 +15,6 @@ function update_sym_link() {
 }
 
 cd $(dirname $0)
-git submodule update --init --recursive #initialize external repository
-
-##prezto
-update_sym_link .zprezto
-force_update_sym_link .zpreztorc
 
 ##zsh
 force_update_sym_link .zlogin
