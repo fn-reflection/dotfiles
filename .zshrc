@@ -12,6 +12,10 @@ setopt HIST_EXPIRE_DUPS_FIRST
 setopt EXTENDED_HISTORY
 bindkey '\e[A' history-search-backward
 bindkey '\e[B' history-search-forward
+if [ -e "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" ]
+then
+    source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
 
 ## ALIASES
 alias g='git'
