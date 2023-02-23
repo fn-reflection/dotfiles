@@ -12,10 +12,18 @@ setopt HIST_EXPIRE_DUPS_FIRST
 setopt EXTENDED_HISTORY
 bindkey '^[\e[A' history-search-backward
 bindkey '^[\e[B' history-search-forward
-if [ -e "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" ]
-then
+if [ -e "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" ];then
     source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
+if [ -e "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ];then
+    source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+if [ -e "$HOME/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh" ];then
+    source $HOME/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+fi
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 
 ## ALIASES
 alias g='git'
