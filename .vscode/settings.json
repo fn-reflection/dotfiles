@@ -16,7 +16,7 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
-    "editor.fontFamily": "'Ricty Diminished', Consolas, 'Courier New', monospace",
+    "editor.fontFamily": "'FiraCode Nerd Font', 'Ricty Diminished', Consolas, 'Courier New', monospace",
     "editor.inlineSuggest.enabled": true,
     "editor.minimap.enabled": false,
     "editor.suggestSelection": "first",
@@ -82,7 +82,7 @@
     "solargraph.checkGemVersion": false,
     "solargraph.diagnostics": true,
     "solargraph.formatting": true,
-    "terminal.integrated.fontFamily": "'Ricty Diminished', Consolas, 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Ricty Diminished', Consolas, 'Courier New', monospace",
     "terminal.integrated.scrollback": 50000,
     "typescript.updateImportsOnFileMove.enabled": "never",
     "window.zoomLevel": 1,
