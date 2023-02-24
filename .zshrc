@@ -10,8 +10,10 @@ SAVEHIST=1000
 HISTSIZE=999
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt EXTENDED_HISTORY
-bindkey '^[\e[A' history-search-backward
-bindkey '^[\e[B' history-search-forward
+bindkey ';3A' history-search-backward # linux
+bindkey '^[\e[A' history-search-backward # mac
+bindkey ';3B' history-search-forward # linux
+bindkey '^[\e[B' history-search-forward # mac
 if [ -e "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" ];then
     source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
