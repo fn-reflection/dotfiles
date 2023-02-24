@@ -23,6 +23,9 @@ force_update_sym_link .zprofile
 force_update_sym_link .zshenv
 force_update_sym_link .zshrc
 
+#wezterm
+force_update_sym_link .wezterm.lua
+
 #vim
 force_update_sym_link .vimrc
 update_sym_link .vim/colors
