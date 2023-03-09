@@ -17,10 +17,7 @@ function update_sym_link() {
 cd $(dirname $0)
 
 ##zsh
-force_update_sym_link .zlogin
-force_update_sym_link .zlogout
 force_update_sym_link .zprofile
-force_update_sym_link .zshenv
 force_update_sym_link .zshrc
 
 #wezterm
