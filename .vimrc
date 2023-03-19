@@ -1,19 +1,19 @@
 syntax enable
-set number
 set cursorline
-set virtualedit=onemore
-set smartindent
-set visualbell
-set showmatch
+set expandtab
+set hlsearch
+set ignorecase
+set incsearch
 set laststatus=2
+set number
+set shiftwidth=4
+set showmatch
+set smartcase
+set smartindent
+set tabstop=4
+set virtualedit=onemore
+set visualbell
 set wildmode=list:longest
+set wrapscan
 nnoremap j gj
 nnoremap k gk
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set ignorecase
-set smartcase
-set incsearch
-set wrapscan
-set hlsearch

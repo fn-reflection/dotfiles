@@ -5,6 +5,9 @@
     "[json]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
+    "[python]": {
+        "editor.formatOnType": true
+    },
     "[typescript]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
@@ -85,6 +88,13 @@
     "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Ricty Diminished', Consolas, 'Courier New', monospace",
     "terminal.integrated.scrollback": 50000,
     "typescript.updateImportsOnFileMove.enabled": "never",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.hlsearch": true,
     "window.zoomLevel": 2,
     "workbench.colorCustomizations": {
         "editorError.foreground": "#111111",
