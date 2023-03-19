@@ -6,7 +6,7 @@ return {
     cursor_blink_rate = 500,
     default_cursor_style = 'BlinkingUnderline',
     disable_default_key_bindings = true,
-    font = wezterm.font_with_fallback({'FiraCode Nerd Font', 'JetBrains Mono'}),
+    font = wezterm.font_with_fallback({'FiraCode Nerd Font', 'Cica'}),
     font_size = 16.0,
     keys = {
         {key = 'c', mods = 'CTRL', action = wezterm.action {CopyTo = "Clipboard"}}, -- CTRL+C for SIGINT
