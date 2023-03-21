@@ -88,13 +88,39 @@
     "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Ricty Diminished', Consolas, 'Courier New', monospace",
     "terminal.integrated.scrollback": 50000,
     "typescript.updateImportsOnFileMove.enabled": "never",
+    "vim.easymotion": true, // https://github.com/VSCodeVim/Vim#vim-easymotion
+    "vim.handlekeys": {
+        "<C-a>": false, // increment number -> select all
+        "<C-d>": false, // page down -> quick word selection
+    },
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
     "vim.insertModeKeyBindings": [
         {
-            "before": ["j", "j"],
-            "after": ["<Esc>"]
-        }
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }, // quick escape
     ],
-    "vim.hlsearch": true,
+    "vim.leader": "space",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "f"
+            ],
+            "after": [
+                "leader",
+                "leader",
+                "s"
+            ]
+        } // inline find -> easy motion find
+    ],
+    "vim.surround": true, // https://github.com/VSCodeVim/Vim#vim-surround
+    "vim.useSystemClipboard": true, // use system clipboard
     "window.zoomLevel": 2,
     "workbench.colorCustomizations": {
         "editorError.foreground": "#111111",
@@ -104,5 +130,6 @@
     "workbench.colorTheme": "Default Dark+",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
-    }
+    },
+    "git.openRepositoryInParentFolders": "always"
 }
