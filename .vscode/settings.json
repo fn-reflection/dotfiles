@@ -1,4 +1,7 @@
 {
+    "[csv]": {
+        "editor.wordWrap": "off", // care about too long rows
+    },
     "[javascript]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
@@ -6,23 +9,51 @@
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
     "[python]": {
-        "editor.formatOnType": true
+        "diffEditor.ignoreTrimWhitespace": false, // indent has semantic meaning
+    },
+    "[log]": {
+        "editor.wordWrap": "off", // care about too long rows
+    },
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false, // trailing space has semantic meaning
+    },
+    "[tsv]": {
+        "editor.insertSpaces": false, // tab has semantic meaning
+        "editor.wordWrap": "off", // care about too long rows
     },
     "[typescript]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
-    "css.validate": false,
-    "debug.inlineValues": "on",
-    "diffEditor.ignoreTrimWhitespace": false,
+    "[yaml]": {
+        "diffEditor.ignoreTrimWhitespace": false, // indent has semantic meaning
+    },
+    "breadcrumbs.enabled": false,
+    "debug.autoExpandLazyVariables": false, // true if I need eager load
+    "debug.internalConsoleOptions": "openOnSessionStart", // from "openOnFirstSessionStart"
+    "debug.openDebug": "openOnSessionStart", // from "openOnFirstSessionStart"
     "diffEditor.maxComputationTime": 0,
     "diffEditor.renderSideBySide": false,
+    "diffEditor.wordWrap": "off",
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
-    "editor.fontFamily": "'FiraCode Nerd Font', 'Ricty Diminished', Consolas, 'Courier New', monospace",
-    "editor.inlineSuggest.enabled": true,
-    "editor.minimap.enabled": false,
-    "editor.suggestSelection": "first",
+    "editor.copyWithSyntaxHighlighting": false, // copy as plain text
+    "editor.cursorBlinking": "phase", // smooth blink
+    "editor.cursorStyle": "line",
+    "editor.dragAndDrop": false, // prevent to move codes by misuse of D&D
+    "editor.fontFamily": "'FiraCode Nerd Font', 'Ricty Diminished', monospace",
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.guides.bracketPairs": "active", // colorful indent guides
+    "editor.minimap.enabled": false, // disable to save editor space
+    "editor.mouseWheelZoom": true,
+    "editor.suggest.preview": true, // suggest preview like copilot
+    "editor.renderControlCharacters": true, // ENSURE to display control characters
+    "editor.renderWhitespace": "boundary", // ENSURE to display whitespace
+    "editor.showFoldingControls": "always", // from "mouseover"
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?　、。！？「」【】『』（）", // add Japanese separators
+    "editor.wordWrap": "on", // always word wrap
     "eslint.format.enable": true,
     "eslint.validate": [
         "javascript",
@@ -30,6 +61,7 @@
         "typescript",
         "typescriptreact"
     ],
+    "explorer.incrementalNaming": "smart", // paste copied filename with numbers suffix
     "extensions.ignoreRecommendations": false,
     "files.eol": "\n",
     "files.exclude": {
@@ -42,9 +74,18 @@
         "**/.settings": true,
         "**/__pycache__": true
     },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "git.branchProtection": [
+        "master",
+        "main",
+        "development"
+    ],
     "git.confirmSync": false,
     "git.detectSubmodulesLimit": 30,
-    "git.enableSmartCommit": true,
+    "git.enableSmartCommit": false,
+    "git.openRepositoryInParentFolders": "always",
     "git.suggestSmartCommit": false,
     "gitlens.menus": {
         "editorGroup": {
@@ -71,6 +112,7 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
+    "problems.showCurrentInStatus": false, // if true, current file's problems only
     "python.defaultInterpreterPath": "/usr/bin/python",
     "python.languageServer": "Pylance",
     "python.linting.enabled": true,
@@ -82,17 +124,21 @@
     ],
     "scss.lint.unknownAtRules": "ignore",
     "scss.validate": false,
+    "search.showLineNumbers": true,
     "solargraph.checkGemVersion": false,
     "solargraph.diagnostics": true,
     "solargraph.formatting": true,
+    "telemetry.telemetryLevel": "off", // no error report
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Ricty Diminished', Consolas, 'Courier New', monospace",
     "terminal.integrated.scrollback": 50000,
-    "typescript.updateImportsOnFileMove.enabled": "never",
     "vim.easymotion": true, // https://github.com/VSCodeVim/Vim#vim-easymotion
     "vim.handlekeys": {
         "<C-a>": false, // increment number -> select all
         "<C-d>": false, // page down -> quick word selection
     },
+    "vim.highlightedyank.enable": true,
     "vim.hlsearch": true,
     "vim.incsearch": true,
     "vim.insertModeKeyBindings": [
@@ -117,11 +163,19 @@
                 "leader",
                 "s"
             ]
-        } // inline find -> easy motion find
+        }, // inline find -> easy motion find
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        } // -> no highlight
     ],
     "vim.surround": true, // https://github.com/VSCodeVim/Vim#vim-surround
     "vim.useSystemClipboard": true, // use system clipboard
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 0,
     "workbench.colorCustomizations": {
         "editorError.foreground": "#111111",
         "editorInfo.foreground": "#555555",
@@ -131,5 +185,7 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
-    "git.openRepositoryInParentFolders": "always"
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.startupEditor": "none",
+    "editor.inlineSuggest.enabled": true, // or "readme"
 }
