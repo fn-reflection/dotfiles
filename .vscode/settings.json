@@ -1,4 +1,5 @@
 {
+    // https://code.visualstudio.com/docs/getstarted/settings#_default-settings
     "[csv]": {
         "editor.wordWrap": "off", // care about too long rows
     },
@@ -48,6 +49,7 @@
     "editor.guides.bracketPairs": "active", // colorful indent guides
     "editor.minimap.enabled": false, // disable to save editor space
     "editor.mouseWheelZoom": true,
+    "editor.quickSuggestionsDelay": 200, // from 10
     "editor.suggest.preview": true, // suggest preview like copilot
     "editor.renderControlCharacters": true, // ENSURE to display control characters
     "editor.renderWhitespace": "boundary", // ENSURE to display whitespace
@@ -175,6 +177,7 @@
     ],
     "vim.surround": true, // https://github.com/VSCodeVim/Vim#vim-surround
     "vim.useSystemClipboard": true, // use system clipboard
+    "vim.visualstar": true,
     "window.zoomLevel": 0,
     "workbench.colorCustomizations": {
         "editorError.foreground": "#111111",
