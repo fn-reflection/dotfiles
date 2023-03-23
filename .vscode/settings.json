@@ -6,11 +6,18 @@
     "[javascript]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
     "[json]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
     "[python]": {
         "diffEditor.ignoreTrimWhitespace": false, // indent has semantic meaning
+    },
+    "[ruby]": {
+        "editor.formatOnSave": false,
+        "files.trimFinalNewlines": false,
     },
     "[log]": {
         "editor.wordWrap": "off", // care about too long rows
@@ -23,6 +30,9 @@
         "editor.wordWrap": "off", // care about too long rows
     },
     "[typescript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[typescriptreact]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
     "[yaml]": {
@@ -47,6 +57,7 @@
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.guides.bracketPairs": "active", // colorful indent guides
+    "editor.inlineSuggest.enabled": true,
     "editor.minimap.enabled": false, // disable to save editor space
     "editor.mouseWheelZoom": true,
     "editor.quickSuggestionsDelay": 200, // from 10
@@ -131,6 +142,7 @@
     "solargraph.diagnostics": true,
     "solargraph.formatting": true,
     "telemetry.telemetryLevel": "off", // no error report
+    "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Ricty Diminished', Consolas, 'Courier New', monospace",
@@ -190,5 +202,4 @@
     },
     "workbench.editor.tabSizing": "shrink",
     "workbench.startupEditor": "none",
-    "editor.inlineSuggest.enabled": true, // or "readme"
 }
