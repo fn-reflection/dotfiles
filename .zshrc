@@ -23,6 +23,8 @@ if [ -e "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
 fi
 if [ -e "$HOME/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh" ]; then
     source $HOME/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+elif [ -e "/usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh" ]; then
+    source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 fi
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
