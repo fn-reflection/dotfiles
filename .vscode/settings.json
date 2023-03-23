@@ -76,6 +76,9 @@
     ],
     "explorer.incrementalNaming": "smart", // paste copied filename with numbers suffix
     "extensions.ignoreRecommendations": false,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1 // run on dedicated process to speed up
+    },
     "files.eol": "\n",
     "files.exclude": {
         "**/*.egg-info": true,
@@ -190,6 +193,8 @@
     "vim.surround": true, // https://github.com/VSCodeVim/Vim#vim-surround
     "vim.useSystemClipboard": true, // use system clipboard
     "vim.visualstar": true,
+    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+    "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.lua",
     "window.zoomLevel": 0,
     "workbench.colorCustomizations": {
         "editorError.foreground": "#111111",
