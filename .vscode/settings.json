@@ -52,7 +52,7 @@
     "editor.cursorBlinking": "phase", // smooth blink
     "editor.cursorStyle": "line",
     "editor.dragAndDrop": false, // prevent to move codes by misuse of D&D
-    "editor.fontFamily": "'FiraCode Nerd Font', 'Ricty Diminished', monospace",
+    "editor.fontFamily": "Cica, 'Ricty Diminished', monospace",
     "editor.formatOnType": true,
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
@@ -145,7 +145,7 @@
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "line",
-    "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Ricty Diminished', Consolas, 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "Cica, 'Ricty Diminished', Consolas, 'Courier New', monospace",
     "terminal.integrated.scrollback": 50000,
     "vim.easymotion": true, // https://github.com/VSCodeVim/Vim#vim-easymotion
     "vim.handlekeys": {
