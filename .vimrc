@@ -6,7 +6,7 @@ set ignorecase
 set incsearch
 set laststatus=2
 " not treat as decimal or hex
-set nrformats= 
+set nrformats=
 set number
 set shiftwidth=4
 set showmatch
