@@ -17,9 +17,13 @@ bindkey ';3B' history-search-forward     # linux
 bindkey '^[\e[B' history-search-forward  # mac
 if [ -e "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
     source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+elif [ -e "/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
+    source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 if [ -e "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
     source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+elif [ -e "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
+    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 if [ -e "$HOME/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh" ]; then
     source $HOME/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
