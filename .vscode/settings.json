@@ -12,6 +12,9 @@
     "[json]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
+    "[lua]": {
+        "editor.defaultFormatter": "yinfei.luahelper"
+    },
     "[python]": {
         "diffEditor.ignoreTrimWhitespace": false, // indent has semantic meaning
     },
@@ -76,9 +79,6 @@
     ],
     "explorer.incrementalNaming": "smart", // paste copied filename with numbers suffix
     "extensions.ignoreRecommendations": false,
-    "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1 // run on dedicated process to speed up
-    },
     "files.eol": "\n",
     "files.exclude": {
         "**/*.egg-info": true,
