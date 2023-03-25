@@ -35,6 +35,8 @@ bindkey '^[[B' history-substring-search-down
 
 ## ALIASES
 alias g='git'
+alias vi='nvim'
+alias vim='nvim'
 
 ## PATHES
 export PATH="$HOME/.cargo/bin:$PATH"
