@@ -33,3 +33,5 @@
 [diff "ansible-vault"]
     textconv = ansible-vault view
     cachetextconv = true
+[init]
+	defaultBranch = main
