@@ -27,7 +27,7 @@ function setting_json_dir() {
 
 cd "$(dirname "$0")" || return
 
-for file in settings.json keybindings.json
+for path in settings.json keybindings.json snippets
 do
-  ln -sf "$(pwd)"/.vscode/"$file" "$(setting_json_dir $(current_os))"/"$file"
+  ln -sf "$(pwd)"/.vscode/"$path" "$(setting_json_dir $(current_os))"/"$path"
 done

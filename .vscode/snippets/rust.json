@@ -1,0 +1,9 @@
+{
+	"quick_debug_println!": {
+		"prefix": "qd",
+		"body": [
+			"println!(\"{:?}\", ${1});",
+		],
+		"description": "quick_debug_println!"
+	}
+}
