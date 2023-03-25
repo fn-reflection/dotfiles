@@ -1,4 +1,4 @@
---[[
+-- DISABLE LOADING TO QUICK LAUNCH
 vim.g.did_install_default_menus = 1;
 vim.g.did_install_syntax_menu = 1;
 vim.g.did_indent_on = 1;
@@ -18,19 +18,24 @@ vim.g.loaded_tutor_mode_plugin = 1;
 vim.g.loaded_zipPlugin = 1;
 vim.g.skip_loading_mswin = 1;
 vim.g.skip_defaults_vim = 1;
---]] -- KEY MAPPING
+
+-- KEY MAPPING
 vim.g.mapleader = ' '
-vim.g.whichwrap = '<,>,h,l'
+vim.opt.whichwrap:append('<')
+vim.opt.whichwrap:append('>')
+vim.opt.whichwrap:append('h')
+vim.opt.whichwrap:append('l')
+vim.keymap.set('n', 'v', '<C-v>') -- use VISUAL BLOCK as default and avoid conflict (C-v as PASTE)
 vim.keymap.set('i', 'jj', '<esc>')
 
 -- CUSTOMIZE
 vim.opt.clipboard:append{'unnamedplus'} -- use system clipboard
-vim.opt.ignorecase = true
-vim.opt_local.number = true -- show line numbers
-vim.opt.mouse = a -- enable mouse on all modes
-vim.opt.smartcase = true -- case sensitive search when query has uppercase character
---[[
+vim.opt.ignorecase = true -- ic as default, `:set noic` to disable
+vim.opt_local.number = true -- show line numbers as default, `:set nonu` to disable
+vim.opt.mouse = 'a' -- enable mouse on all modes
+vim.opt.smartcase = true -- case sensitive search when query has some upper-case character
 vim.cmd('packadd vim-jetpack')
+--[[
 require('jetpack.packer').startup(function(use)
     -- use from VSCode NeoVim or NeoVim
     use 'tpope/vim-commentary'
