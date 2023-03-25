@@ -35,9 +35,12 @@ vim.opt_local.number = true -- show line numbers as default, `:set nonu` to disa
 vim.opt.mouse = 'a' -- enable mouse on all modes
 vim.opt.smartcase = true -- case sensitive search when query has some upper-case character
 vim.cmd('packadd vim-jetpack')
---[[
 require('jetpack.packer').startup(function(use)
-    -- use from VSCode NeoVim or NeoVim
+    -- use from VSCode Neovim or Neovim
+    use {
+        'tani/vim-jetpack',
+        opt = 1
+    } -- to bootstrap vim-jetpack
     use 'tpope/vim-commentary'
     use 'easymotion/vim-easymotion'
     use 'haya14busa/vim-edgemotion'
@@ -46,7 +49,7 @@ require('jetpack.packer').startup(function(use)
         return nil
     end
 
-    -- use from only NeoVim
+    -- use from only Neovim
     use 'feline-nvim/feline.nvim'
     use 'zefei/vim-wintabs'
     use {
@@ -61,4 +64,3 @@ require('jetpack.packer').startup(function(use)
     use 'airblade/vim-gitgutter'
     use 'simeji/winresizer'
 end)
---]]
