@@ -1,0 +1,28 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "dictionaries": [
+        "bash",
+        "companies",
+        "cpp",
+        "css",
+        "en_US",
+        "filetypes",
+        "fonts",
+        "html",
+        "misc",
+        "my_artifacts",
+        "npm",
+        "python",
+        "softwareTerms",
+        "rust",
+        "typescript"
+    ],
+    "dictionaryDefinitions": [
+        {
+            "name": "my_artifacts",
+            "path": "./my_spells/artifacts.txt",
+            "addWords": true
+        }
+    ]
+}
