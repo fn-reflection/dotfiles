@@ -27,7 +27,15 @@ function setting_json_dir() {
 
 cd "$(dirname "$0")" || return
 
-for path in settings.json keybindings.json snippets .cspell.json my_spells
-do
-  ln -sf "$(pwd)"/.vscode/"$path" "$(setting_json_dir $(current_os))"/"$path"
+src_dir="$(realpath $(dirname "$0"))/.vscode"
+ref_dir="$(setting_json_dir $(current_os))"
+echo "make symbolic link forcibly to $src_dir in $ref_dir"
+for path in settings.json keybindings.json .cspell.json; do
+  ln -sf "$src_dir"/"$path" "$ref_dir"/"$path"
+done
+
+for path in snippets my_spells; do
+  if [ ! -e "$ref_dir"/"$path" ]; then
+    ln -sf "$src_dir"/"$path/" "$ref_dir"/"$path"
+  fi
 done
