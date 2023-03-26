@@ -32,11 +32,16 @@ vim.keymap.set("", "<C-j>", "<Plug>(edgemotion-j)", opt)
 vim.keymap.set("", "<C-k>", "<Plug>(edgemotion-k)", opt)
 
 -- CUSTOMIZE
+vim.opt.autoindent = true -- same indent as current line
+vim.opt.autoread = true -- auto reload file when changed
 vim.opt.clipboard:append{'unnamedplus'} -- use system clipboard
+vim.opt.expandtab = true -- convert tab to space
 vim.opt.ignorecase = true -- ic as default, `:set noic` to disable
 vim.opt_local.number = true -- show line numbers as default, `:set nonu` to disable
 vim.opt.mouse = 'a' -- enable mouse on all modes
 vim.opt.smartcase = true -- case sensitive search when query has some upper-case character
+vim.opt.smartindent = true -- smart indent by parenthesis
+vim.opt.tabstop = 4 -- tab size
 vim.opt.termguicolors = true -- enable 24-bit RGB color for feline
 vim.cmd('packadd vim-jetpack')
 require('jetpack.packer').startup(function(use)
