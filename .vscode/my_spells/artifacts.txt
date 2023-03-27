@@ -9,7 +9,7 @@ hlsearch
 incsearch
 ipynb
 luahelper
-neovim
+Neovim
 nohl
 nvim
 Pylance
