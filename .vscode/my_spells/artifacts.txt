@@ -1,3 +1,4 @@
+Bitwarden
 Cica
 classpath
 dbaeumer
@@ -8,14 +9,21 @@ highlightedyank
 hlsearch
 incsearch
 ipynb
+KDBX
 luahelper
 Neovim
 nohl
 nvim
+otpauth
 Pylance
 rdbg
 Ricty
 scrollback
 solargraph
+startuptime
+TOTP
+vimtutor
 visualstar
 yinfei
+YubiKey
+Zenn
