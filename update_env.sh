@@ -16,25 +16,11 @@ function update_sym_link() {
 
 cd $(dirname $0)
 
-# zsh
-force_update_sym_link .zprofile
-force_update_sym_link .zshrc
-
-# wezterm
-force_update_sym_link .wezterm.lua
-
-# vim
-force_update_sym_link .vimrc
-update_sym_link .vim/colors
-
-# nvim
-force_update_sym_link .config/nvim/init.lua
-
 # git
 force_update_sym_link .gitconfig
 
-# tmux
-force_update_sym_link .tmux.conf
+# nvim
+force_update_sym_link .config/nvim/init.lua
 
 # python
 update_sym_link .ipython/profile_default/startup
@@ -43,5 +29,22 @@ force_update_sym_link .jupyter/jupyter_notebook_config.py
 force_update_sym_link .config/pep8
 force_update_sym_link .config/pylintrc
 
+# textlint
+force_update_sym_link .textlintrc
+
+# tmux
+force_update_sym_link .tmux.conf
+
 # ruby
 force_update_sym_link .pryrc
+
+# vim
+force_update_sym_link .vimrc
+update_sym_link .vim/colors
+
+# wezterm
+force_update_sym_link .wezterm.lua
+
+# zsh
+force_update_sym_link .zprofile
+force_update_sym_link .zshrc
