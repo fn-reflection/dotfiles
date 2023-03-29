@@ -1,5 +1,4 @@
 local wezterm = require 'wezterm'
-local LEFT_ARROW = utf8.char(0xe0b3);
 local SOLID_LEFT_ARROW = utf8.char(0xe0b2)
 
 function enumerate(tbl, func)
@@ -25,21 +24,20 @@ function day_of_week_in_japan(weeknum)
     return days[weeknum + 1]
 end
 
-function powerline(text, is_last, index)
-    local colors = {"#3c1361", "#52307c", "#663a82", "#7c5295", "#b491c8"}
+function powerline(text, color)
     return {{
         Foreground = {
-            Color = colors[index]
+            Color = color
         }
     }, {
         Text = SOLID_LEFT_ARROW
     }, {
-        Foreground = {
-            Color = "#c0c0c0"
+        Background = {
+            Color = color
         }
     }, {
-        Background = {
-            Color = colors[index]
+        Foreground = {
+            Color = "#c0c0c0"
         }
     }, {
         Text = string.format(" %s ", text)
@@ -51,7 +49,8 @@ function update_right_status(window, pane)
                    string.format("%s(%s) %s", wezterm.strftime("%-m/%-d"), day_of_week_in_japan(wezterm.strftime("%u")),
         wezterm.strftime("%H:%M:%S"))};
     local powerlines = flatten1(enumerate(texts, function(text, index)
-        return powerline(text, index == #texts, index)
+        local colors = {"#3c1361", "#52307c", "#663a82", "#7c5295", "#b491c8"}
+        return powerline(text, colors[index])
     end));
     window:set_right_status(wezterm.format(powerlines))
 end
