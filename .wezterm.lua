@@ -47,7 +47,6 @@ function powerline(text, is_last, index)
 end
 
 function update_right_status(window, pane)
-    local success, stdout, stderr = wezterm.run_child_process {'git', 'branch', '--show-current'}
     local texts = {(table.unpack(success and {stdout} or {})), (pane:get_current_working_dir() or ""):sub(8),
                    string.format("%s(%s) %s", wezterm.strftime("%-m/%-d"), day_of_week_in_japan(wezterm.strftime("%u")),
         wezterm.strftime("%H:%M:%S"))};
