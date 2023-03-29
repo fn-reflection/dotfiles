@@ -41,7 +41,6 @@
     "[yaml]": {
         "diffEditor.ignoreTrimWhitespace": false, // indent has semantic meaning
     },
-    "breadcrumbs.enabled": false,
     "debug.autoExpandLazyVariables": false, // true if I need eager load
     "debug.internalConsoleOptions": "openOnSessionStart", // from "openOnFirstSessionStart"
     "debug.openDebug": "openOnSessionStart", // from "openOnFirstSessionStart"
