@@ -3,8 +3,8 @@ local SOLID_LEFT_ARROW = utf8.char(0xe0b2)
 
 function enumerate(tbl, func)
     local t = {}
-    for k, v in pairs(tbl) do
-        t[k] = func(v, k)
+    for idx, v in ipairs(tbl) do
+        t[idx] = func(v, idx)
     end
     return t
 end
@@ -68,13 +68,88 @@ return {
     font = wezterm.font_with_fallback({'FiraCode Nerd Font', 'Cica'}),
     font_size = 16.0,
     keys = {{
-        key = 'c',
+        key = 'Tab',
+        mods = 'ALT',
+        action = wezterm.action.ActivateTabRelative(1)
+    }, {
+        key = 'Tab',
+        mods = 'ALT|SHIFT',
+        action = wezterm.action.ActivateTabRelative(-1)
+    }, {
+        key = 'Enter',
+        mods = 'ALT',
+        action = wezterm.action.ToggleFullScreen
+    }, {
+        key = 'Enter',
+        mods = 'SUPER',
+        action = wezterm.action.ToggleFullScreen
+    }, {
+        key = '1',
+        mods = 'ALT',
+        action = wezterm.action.ActivateTab(0)
+    }, {
+        key = '2',
+        mods = 'ALT',
+        action = wezterm.action.ActivateTab(1)
+    }, {
+        key = '3',
+        mods = 'ALT',
+        action = wezterm.action.ActivateTab(2)
+    }, {
+        key = '4',
+        mods = 'ALT',
+        action = wezterm.action.ActivateTab(3)
+    }, {
+        key = '5',
+        mods = 'ALT',
+        action = wezterm.action.ActivateTab(4)
+    }, {
+        key = '6',
+        mods = 'ALT',
+        action = wezterm.action.ActivateTab(5)
+    }, {
+        key = '7',
+        mods = 'ALT',
+        action = wezterm.action.ActivateTab(6)
+    }, {
+        key = '8',
+        mods = 'ALT',
+        action = wezterm.action.ActivateTab(7)
+    }, {
+        key = '9',
+        mods = 'ALT',
+        action = wezterm.action.ActivateTab(8)
+    }, {
+        key = '-',
+        mods = 'ALT',
+        action = wezterm.action.DecreaseFontSize
+    }, {
+        key = '-',
+        mods = 'SUPER',
+        action = wezterm.action.SplitVertical {
+            domain = "CurrentPaneDomain"
+        }
+    }, {
+        key = '=',
+        mods = 'ALT',
+        action = wezterm.action.IncreaseFontSize
+    }, {
+        key = 'c', -- CTRL+C for SIGINT
         mods = 'CTRL',
         action = wezterm.action {
             CopyTo = "Clipboard"
         }
-    }, -- CTRL+C for SIGINT
-    {
+    }, {
+        key = 'c',
+        mods = 'SUPER',
+        action = wezterm.action {
+            CopyTo = "Clipboard"
+        }
+    }, {
+        key = 'c',
+        mods = 'ALT|SUPER',
+        action = wezterm.action.QuickSelect
+    }, {
         key = 'f',
         mods = 'CTRL',
         action = wezterm.action {
@@ -83,18 +158,36 @@ return {
             }
         }
     }, {
-        key = 'k',
-        mods = 'CTRL',
-        action = wezterm.action.ClearScrollback 'ScrollbackAndViewport'
-    }, {
-        key = 'v',
-        mods = 'CTRL',
+        key = 'f',
+        mods = 'ALT',
         action = wezterm.action {
-            PasteFrom = "Clipboard"
+            Search = {
+                Regex = ''
+            }
         }
     }, {
+        key = 'f',
+        mods = 'SUPER',
+        action = wezterm.action {
+            Search = {
+                Regex = ''
+            }
+        }
+    }, {
+        key = 'k',
+        mods = 'ALT',
+        action = wezterm.action.ClearScrollback('ScrollbackAndViewport')
+    }, {
+        key = 'k',
+        mods = 'SUPER',
+        action = wezterm.action.ClearScrollback('ScrollbackAndViewport')
+    }, {
+        key = "l",
+        mods = 'SUPER',
+        action = wezterm.action.ShowLauncher
+    }, {
         key = 'L',
-        mods = 'CTRL',
+        mods = 'SUPER',
         action = wezterm.action.ShowDebugOverlay
     }, {
         key = 'n',
@@ -103,9 +196,53 @@ return {
             SpawnTab = 'CurrentPaneDomain'
         }
     }, {
-        key = "l",
-        mods = 'LEADER',
-        action = wezterm.action.ShowLauncher
+        key = 'q',
+        mods = 'ALT',
+        action = wezterm.action.PaneSelect
+    }, {
+        key = 'r',
+        mods = 'SUPER',
+        action = wezterm.action.ReloadConfiguration
+    }, {
+        key = 'v',
+        mods = 'CTRL',
+        action = wezterm.action {
+            PasteFrom = "Clipboard"
+        }
+    }, {
+        key = 'v',
+        mods = 'SUPER',
+        action = wezterm.action {
+            PasteFrom = "Clipboard"
+        }
+    }, {
+        key = 'w',
+        mods = 'SUPER',
+        action = wezterm.action.CloseCurrentTab {
+            confirm = true
+        }
+    }, {
+        key = '\\',
+        mods = 'SHIFT|SUPER',
+        action = wezterm.action.SplitHorizontal {
+            domain = "CurrentPaneDomain"
+        }
+    }, {
+        key = 'LeftArrow',
+        mods = 'ALT',
+        action = wezterm.action.MoveTabRelative(-1)
+    }, {
+        key = 'RightArrow',
+        mods = 'ALT',
+        action = wezterm.action.MoveTabRelative(1)
+    }, {
+        key = 'UpArrow',
+        mods = 'ALT',
+        action = wezterm.action.ScrollByPage(-1)
+    }, {
+        key = 'DownArrow',
+        mods = 'ALT',
+        action = wezterm.action.ScrollByPage(1)
     }},
     leader = {
         key = 'q',
