@@ -1,11 +1,6 @@
 local wezterm = require("wezterm")
 local SOLID_LEFT_ARROW = utf8.char(0xe0b2)
 
-wezterm.GLOBAL.weather_loop_counter = 0
-wezterm.GLOBAL.weathercodes = { -1, -1, -1 }
-wezterm.GLOBAL.min_temperatures = { "?", "?", "?" }
-wezterm.GLOBAL.max_temperatures = { "?", "?", "?" }
-
 function enumerate(tbl, func) -- almost same as python's enumerate(map with index)
 	local t = {}
 	for idx, v in ipairs(tbl) do
@@ -152,9 +147,7 @@ function update_whether()
 		return
 	end
 	local res = wezterm.json_parse(stdout).daily
-	wezterm.GLOBAL.weathercodes = res.weathercode
-	wezterm.GLOBAL.min_temperatures = res.temperature_2m_min
-	wezterm.GLOBAL.max_temperatures = res.temperature_2m_max
+	wezterm.GLOBAL.daily_weather = res
 end
 
 function styled_current_git_branch(current_dir)
@@ -179,8 +172,14 @@ end
 
 function create_powerlines(window, pane)
 	local current_dir = (pane:get_current_working_dir() or ""):sub(8)
+	local daily_weather = wezterm.GLOBAL.daily_weather
+		or {
+			weathercode = { -1, -1, -1 },
+			temperature_2m_min = { "?", "?", "?" },
+			temperature_2m_max = { "?", "?", "?" },
+		}
 	local weather_infos =
-		zip(wezterm.GLOBAL.weathercodes, wezterm.GLOBAL.max_temperatures, wezterm.GLOBAL.min_temperatures)
+		zip(daily_weather.weathercode, daily_weather.temperature_2m_max, daily_weather.temperature_2m_min)
 	local styled_whethers = enumerate(weather_infos, function(weather_info, index)
 		return styled_whether(table.unpack(weather_info))
 	end)
@@ -222,11 +221,13 @@ function create_powerlines(window, pane)
 end
 
 wezterm.on("update-status", function(window, pane)
-	window:set_right_status(wezterm.format(create_powerlines(window, pane)))
-	if wezterm.GLOBAL.weather_loop_counter % (3600 * 4) == 0 then -- every 4 hours
+	local counter = wezterm.GLOBAL.weather_loop_counter or 0
+	if counter % (3600 * 4) == 0 then -- every 4 hours
 		update_whether()
 	end
-	wezterm.GLOBAL.weather_loop_counter = wezterm.GLOBAL.weather_loop_counter + 1
+	wezterm.GLOBAL.weather_loop_counter = counter + 1
+
+	window:set_right_status(wezterm.format(create_powerlines(window, pane)))
 end)
 
 return {
