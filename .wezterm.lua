@@ -157,7 +157,28 @@ function update_whether()
 	wezterm.GLOBAL.max_temperatures = res.temperature_2m_max
 end
 
+function styled_current_git_branch(current_dir)
+	local success, stdout, _stderr = wezterm.run_child_process({
+		"git",
+		"--git-dir",
+		string.format("%s/.git", current_dir),
+		"branch",
+		"--show-current",
+	})
+	return {
+		{
+			Foreground = {
+				Color = "#c0c0c0",
+			},
+		},
+		{
+			Text = success and string.format(" %s ", string.gsub(stdout, "^(.+)\n$", "%1")) or " ❓ ",
+		},
+	}
+end
+
 function create_powerlines(window, pane)
+	local current_dir = (pane:get_current_working_dir() or ""):sub(8)
 	local weather_infos =
 		zip(wezterm.GLOBAL.weathercodes, wezterm.GLOBAL.max_temperatures, wezterm.GLOBAL.min_temperatures)
 	local styled_whethers = enumerate(weather_infos, function(weather_info, index)
@@ -167,6 +188,7 @@ function create_powerlines(window, pane)
 		styled_whethers[1],
 		styled_whethers[2],
 		styled_whethers[3],
+		styled_current_git_branch(current_dir),
 		{
 			{
 				Foreground = {
@@ -174,7 +196,7 @@ function create_powerlines(window, pane)
 				},
 			},
 			{
-				Text = string.format(" %s ", (pane:get_current_working_dir() or ""):sub(8)),
+				Text = string.format(" %s ", current_dir),
 			},
 		},
 		{
