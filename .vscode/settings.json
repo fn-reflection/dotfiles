@@ -13,7 +13,7 @@
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
     "[lua]": {
-        "editor.defaultFormatter": "yinfei.luahelper"
+        "editor.defaultFormatter": "JohnnyMorganz.stylua"
     },
     "[python]": {
         "diffEditor.ignoreTrimWhitespace": false, // indent has semantic meaning
