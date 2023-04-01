@@ -201,6 +201,8 @@
     "vim.visualstar": true,
     "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.lua",
+    "vscode-neovim.useCtrlKeysForInsertMode": false,
+    "vscode-neovim.useCtrlKeysForNormalMode": false,
     "window.zoomLevel": 0,
     "workbench.colorCustomizations": {
         "editorError.foreground": "#111111",
