@@ -2,7 +2,7 @@
   {
     "command": "editor.action.clipboardCopyAction",
     "key": "ctrl+c",
-    "when": "neovim.mode == insert && editorTextFocus"
+    "when": "editorTextFocus"
   },
   {
     "command": "vscode-neovim.compositeEscape1",
@@ -11,14 +11,24 @@
     "args": "j"
   },
   {
+    "command": "editor.action.clipboardPasteAction",
+    "key": "ctrl+v",
+    "when": "editorTextFocus"
+  },
+  {
     "command": "mdmath.showPreview",
     "key": "ctrl+shift+v",
     "when": "editorTextFocus"
   },
   {
-    "command": "editor.action.clipboardPasteAction",
-    "key": "ctrl+v",
-    "when": "neovim.mode == normal && editorTextFocus"
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+x",
+    "command": "editor.action.clipboardCutAction",
+    "when": "editorTextFocus"
   },
   {
     "command": "undo",
