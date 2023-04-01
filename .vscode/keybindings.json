@@ -10,6 +10,36 @@
     "when": "neovim.mode == insert && editorTextFocus"
   },
   {
+    "command": "extension.multiCommand.execute",
+    "key": "ctrl+d",
+    "interval": 30,
+    "args": {
+      "sequence": [
+        {
+          "command": "vscode-neovim.send",
+          "args": "i"
+        },
+        "editor.action.addSelectionToNextFindMatch"
+      ]
+    },
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
+    "command": "extension.multiCommand.execute",
+    "key": "cmd+d",
+    "interval": 30,
+    "args": {
+      "sequence": [
+        {
+          "command": "vscode-neovim.send",
+          "args": "i"
+        },
+        "editor.action.addSelectionToNextFindMatch"
+      ]
+    },
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
     "command": "vscode-neovim.compositeEscape1",
     "key": "j",
     "when": "neovim.mode == insert && editorTextFocus",
