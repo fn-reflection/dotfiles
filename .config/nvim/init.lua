@@ -27,11 +27,14 @@ vim.opt.whichwrap:append("h")
 vim.opt.whichwrap:append("l")
 vim.opt.whichwrap:append("[")
 vim.opt.whichwrap:append("]")
-vim.keymap.set("n", "v", "<C-v>") -- use VISUAL BLOCK as default and avoid conflict (C-v as PASTE)
-vim.keymap.set("n", "cc", "<nop>") -- disable change line
-vim.keymap.set("i", "jj", "<esc>") -- escape from INSERT mode
 vim.keymap.set("", "<C-j>", "<Plug>(edgemotion-j)", opt)
 vim.keymap.set("", "<C-k>", "<Plug>(edgemotion-k)", opt)
+vim.keymap.set("i", "<C-a>", "<Esc>ggVG") -- select all texts
+vim.keymap.set("i", "jj", "<Esc>")
+vim.keymap.set("n", "<C-a>", "ggVG") -- select all texts
+vim.keymap.set("n", "cc", "<nop>") -- disable change line
+vim.keymap.set("n", "v", "<C-v>") -- use VISUAL BLOCK as default and avoid conflict (C-v as PASTE)
+vim.keymap.set("v", "<C-a>", "ggVG") -- select all texts
 
 -- CUSTOMIZE
 vim.opt.autoindent = true -- same indent as current line
