@@ -5,6 +5,11 @@
     "when": "editorTextFocus"
   },
   {
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "key": "ctrl+d",
+    "when": "neovim.mode == insert && editorTextFocus"
+  },
+  {
     "command": "vscode-neovim.compositeEscape1",
     "key": "j",
     "when": "neovim.mode == insert && editorTextFocus",
