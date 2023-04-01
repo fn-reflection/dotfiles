@@ -1,32 +1,17 @@
 [
   {
-    "command": "editor.action.clipboardCopyAction",
     "key": "ctrl+c",
+    "command": "editor.action.clipboardCopyAction",
     "when": "editorTextFocus"
   },
   {
-    "command": "editor.action.addSelectionToNextFindMatch",
     "key": "ctrl+d",
+    "command": "editor.action.addSelectionToNextFindMatch",
     "when": "neovim.mode == insert && editorTextFocus"
   },
   {
-    "command": "extension.multiCommand.execute",
     "key": "ctrl+d",
-    "interval": 30,
-    "args": {
-      "sequence": [
-        {
-          "command": "vscode-neovim.send",
-          "args": "i"
-        },
-        "editor.action.addSelectionToNextFindMatch"
-      ]
-    },
-    "when": "neovim.mode == normal && editorTextFocus"
-  },
-  {
     "command": "extension.multiCommand.execute",
-    "key": "cmd+d",
     "interval": 30,
     "args": {
       "sequence": [
@@ -40,25 +25,144 @@
     "when": "neovim.mode == normal && editorTextFocus"
   },
   {
-    "command": "vscode-neovim.compositeEscape1",
+    "key": "cmd+d",
+    "command": "extension.multiCommand.execute",
+    "interval": 30,
+    "args": {
+      "sequence": [
+        {
+          "command": "vscode-neovim.send",
+          "args": "i"
+        },
+        "editor.action.addSelectionToNextFindMatch"
+      ]
+    },
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "extension.multiCommand.execute",
+    "interval": 30,
+    "args": {
+      "sequence": [
+        {
+          "command": "vscode-neovim.send",
+          "args": "i"
+        },
+        "editor.action.smartSelect.shrink"
+      ]
+    },
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+e",
+    "command": "extension.multiCommand.execute",
+    "interval": 30,
+    "args": {
+      "sequence": [
+        {
+          "command": "vscode-neovim.send",
+          "args": "i"
+        },
+        "editor.action.smartSelect.shrink"
+      ]
+    },
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
+    "key": "cmd+e",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "neovim.mode != normal && editorTextFocus"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "-cursorLineEnd",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+e",
+    "command": "-actions.findWithSelection"
+  },
+  {
     "key": "j",
+    "command": "vscode-neovim.compositeEscape1",
     "when": "neovim.mode == insert && editorTextFocus",
     "args": "j"
   },
   {
-    "command": "editor.action.clipboardPasteAction",
-    "key": "ctrl+v",
-    "when": "editorTextFocus"
+    "key": "ctrl+q",
+    "command": "workbench.action.closeActiveEditor",
   },
   {
-    "command": "mdmath.showPreview",
-    "key": "ctrl+shift+v",
+    "key": "cmd+q",
+    "command": "-workbench.action.quit"
+  },
+  {
+    "key": "cmd+q",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "shift+cmd+p",
+    "command": "workbench.action.showErrorsWarnings"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "editor.action.clipboardPasteAction",
     "when": "editorTextFocus"
   },
   {
     "key": "ctrl+w",
-    "command": "workbench.action.closeActiveEditor",
+    "command": "extension.multiCommand.execute",
+    "interval": 30,
+    "args": {
+      "sequence": [
+        {
+          "command": "vscode-neovim.send",
+          "args": "i"
+        },
+        "editor.action.smartSelect.expand"
+      ]
+    },
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "editor.action.smartSelect.expand",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+w",
+    "command": "extension.multiCommand.execute",
+    "interval": 30,
+    "args": {
+      "sequence": [
+        {
+          "command": "vscode-neovim.send",
+          "args": "i"
+        },
+        "editor.action.smartSelect.expand"
+      ]
+    },
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
+    "key": "cmd+w",
+    "command": "editor.action.smartSelect.expand",
+    "when": "neovim.mode != normal && editorTextFocus"
+  },
+  {
+    "key": "cmd+w",
+    "command": "-workbench.action.closeWindow",
+    "when": "!editorIsOpen && !multipleEditorGroups"
+  },
+  {
+    "key": "cmd+w",
+    "command": "-workbench.action.closeActiveEditor"
   },
   {
     "key": "ctrl+x",
@@ -66,8 +170,88 @@
     "when": "editorTextFocus"
   },
   {
-    "command": "undo",
     "key": "ctrl+z",
+    "command": "undo",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "editor.action.insertCursorAbove",
+    "when": "neovim.mode != normal && editorTextFocus"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "extension.multiCommand.execute",
+    "interval": 30,
+    "args": {
+      "sequence": [
+        {
+          "command": "vscode-neovim.send",
+          "args": "i"
+        },
+        "editor.action.insertCursorAbove"
+      ]
+    },
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
+    "key": "cmd+up",
+    "command": "editor.action.insertCursorAbove",
+    "when": "neovim.mode != normal && editorTextFocus"
+  },
+  {
+    "key": "cmd+up",
+    "command": "extension.multiCommand.execute",
+    "interval": 30,
+    "args": {
+      "sequence": [
+        {
+          "command": "vscode-neovim.send",
+          "args": "i"
+        },
+        "editor.action.insertCursorAbove"
+      ]
+    },
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "editor.action.insertCursorBelow",
+    "when": "neovim.mode != normal && editorTextFocus"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "extension.multiCommand.execute",
+    "interval": 30,
+    "args": {
+      "sequence": [
+        {
+          "command": "vscode-neovim.send",
+          "args": "i"
+        },
+        "editor.action.insertCursorBelow"
+      ]
+    },
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
+    "key": "cmd+down",
+    "command": "editor.action.insertCursorBelow",
+    "when": "neovim.mode != normal && editorTextFocus"
+  },
+  {
+    "key": "cmd+down",
+    "command": "extension.multiCommand.execute",
+    "interval": 30,
+    "args": {
+      "sequence": [
+        {
+          "command": "vscode-neovim.send",
+          "args": "i"
+        },
+        "editor.action.insertCursorBelow"
+      ]
+    },
+    "when": "neovim.mode == normal && editorTextFocus"
   },
 ]
