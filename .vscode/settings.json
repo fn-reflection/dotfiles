@@ -3,6 +3,9 @@
     "[csv]": {
         "editor.wordWrap": "off", // care about too long rows
     },
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
     "[javascript]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
