@@ -25,9 +25,11 @@ vim.opt.whichwrap:append("<")
 vim.opt.whichwrap:append(">")
 vim.opt.whichwrap:append("h")
 vim.opt.whichwrap:append("l")
+vim.opt.whichwrap:append("[")
+vim.opt.whichwrap:append("]")
 vim.keymap.set("n", "v", "<C-v>") -- use VISUAL BLOCK as default and avoid conflict (C-v as PASTE)
 vim.keymap.set("n", "cc", "<nop>") -- disable change line
-vim.keymap.set("i", "jj", "<esc>")
+vim.keymap.set("i", "jj", "<esc>") -- escape from INSERT mode
 vim.keymap.set("", "<C-j>", "<Plug>(edgemotion-j)", opt)
 vim.keymap.set("", "<C-k>", "<Plug>(edgemotion-k)", opt)
 
