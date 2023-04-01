@@ -2,7 +2,7 @@
   {
     "command": "execCopy",
     "key": "ctrl+c",
-    "when": "neovim.mode == insert && editorTextFocus",
+    "when": "neovim.mode == insert && editorTextFocus"
   },
   {
     "command": "vscode-neovim.compositeEscape1",
