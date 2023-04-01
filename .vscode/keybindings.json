@@ -1,13 +1,18 @@
 [
   {
+    "command": "execCopy",
+    "key": "ctrl+c",
+    "when": "neovim.mode == insert && editorTextFocus",
+  },
+  {
     "command": "vscode-neovim.compositeEscape1",
     "key": "j",
     "when": "neovim.mode == insert && editorTextFocus",
     "args": "j"
   },
   {
-    "key": "ctrl+shift+v",
     "command": "mdmath.showPreview",
+    "key": "ctrl+shift+v",
     "when": "editorTextFocus"
-  },
+  }
 ]
