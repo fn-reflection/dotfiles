@@ -1,6 +1,6 @@
 [
   {
-    "command": "execCopy",
+    "command": "editor.action.clipboardCopyAction",
     "key": "ctrl+c",
     "when": "neovim.mode == insert && editorTextFocus"
   },
@@ -14,5 +14,15 @@
     "command": "mdmath.showPreview",
     "key": "ctrl+shift+v",
     "when": "editorTextFocus"
-  }
+  },
+  {
+    "command": "editor.action.clipboardPasteAction",
+    "key": "ctrl+v",
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
+    "command": "undo",
+    "key": "ctrl+z",
+    "when": "editorTextFocus"
+  },
 ]
