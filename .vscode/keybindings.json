@@ -1,5 +1,9 @@
 [
   {
+    "key": "cmd+enter",
+    "command": "workbench.action.toggleZenMode"
+  },
+  {
     "key": "ctrl+c",
     "command": "editor.action.clipboardCopyAction",
     "when": "editorTextFocus"
@@ -38,6 +42,46 @@
       ]
     },
     "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
+    "key": "alt+ctrl+d",
+    "command": "extension.multiCommand.execute",
+    "interval": 30,
+    "args": {
+      "sequence": [
+        {
+          "command": "vscode-neovim.send",
+          "args": "i"
+        },
+        "editor.action.selectHighlights"
+      ]
+    },
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
+    "key": "alt+ctrl+d",
+    "command": "editor.action.selectHighlights",
+    "when": "neovim.mode != normal && editorFocus"
+  },
+  {
+    "key": "alt+cmd+d",
+    "command": "extension.multiCommand.execute",
+    "interval": 30,
+    "args": {
+      "sequence": [
+        {
+          "command": "vscode-neovim.send",
+          "args": "i"
+        },
+        "editor.action.selectHighlights"
+      ]
+    },
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+d",
+    "command": "editor.action.selectHighlights",
+    "when": "neovim.mode != normal && editorFocus"
   },
   {
     "key": "ctrl+e",
@@ -89,10 +133,24 @@
     "command": "-actions.findWithSelection"
   },
   {
+    "key": "shift+alt+f",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+  },
+  {
     "key": "j",
     "command": "vscode-neovim.compositeEscape1",
     "when": "neovim.mode == insert && editorTextFocus",
     "args": "j"
+  },
+  {
+    "key": "cmd+m",
+    "command": "copyRelativeFilePath",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+cmd+p",
+    "command": "workbench.action.showErrorsWarnings"
   },
   {
     "key": "ctrl+q",
@@ -107,8 +165,9 @@
     "command": "workbench.action.closeActiveEditor"
   },
   {
-    "key": "shift+cmd+p",
-    "command": "workbench.action.showErrorsWarnings"
+    "key": "cmd+r",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
   {
     "key": "ctrl+v",
