@@ -93,14 +93,14 @@
           "command": "vscode-neovim.send",
           "args": "i"
         },
-        "editor.action.smartSelect.shrink"
+        "editor.action.smartSelect.expand"
       ]
     },
     "when": "neovim.mode == normal && editorTextFocus"
   },
   {
     "key": "ctrl+e",
-    "command": "editor.action.smartSelect.shrink",
+    "command": "editor.action.smartSelect.expand",
     "when": "editorTextFocus"
   },
   {
@@ -113,14 +113,14 @@
           "command": "vscode-neovim.send",
           "args": "i"
         },
-        "editor.action.smartSelect.shrink"
+        "editor.action.smartSelect.expand"
       ]
     },
     "when": "neovim.mode == normal && editorTextFocus"
   },
   {
     "key": "cmd+e",
-    "command": "editor.action.smartSelect.shrink",
+    "command": "editor.action.smartSelect.expand",
     "when": "neovim.mode != normal && editorTextFocus"
   },
   {
@@ -153,75 +153,62 @@
     "command": "workbench.action.showErrorsWarnings"
   },
   {
-    "key": "ctrl+q",
-    "command": "workbench.action.closeActiveEditor",
-  },
-  {
     "key": "cmd+q",
     "command": "-workbench.action.quit"
   },
   {
-    "key": "cmd+q",
-    "command": "workbench.action.closeActiveEditor"
+    "key": "ctrl+r",
+    "command": "extension.multiCommand.execute",
+    "interval": 30,
+    "args": {
+      "sequence": [
+        {
+          "command": "vscode-neovim.send",
+          "args": "i"
+        },
+        "editor.action.smartSelect.shrink"
+      ]
+    },
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "editorTextFocus"
   },
   {
     "key": "cmd+r",
+    "command": "extension.multiCommand.execute",
+    "interval": 30,
+    "args": {
+      "sequence": [
+        {
+          "command": "vscode-neovim.send",
+          "args": "i"
+        },
+        "editor.action.smartSelect.shrink"
+      ]
+    },
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
+    "key": "cmd+r",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "neovim.mode != normal && editorTextFocus"
+  },
+  {
+    "key": "cmd+t",
     "command": "editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "cmd+t",
+    "command": "-workbench.action.showAllSymbols"
   },
   {
     "key": "ctrl+v",
     "command": "editor.action.clipboardPasteAction",
     "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+w",
-    "command": "extension.multiCommand.execute",
-    "interval": 30,
-    "args": {
-      "sequence": [
-        {
-          "command": "vscode-neovim.send",
-          "args": "i"
-        },
-        "editor.action.smartSelect.expand"
-      ]
-    },
-    "when": "neovim.mode == normal && editorTextFocus"
-  },
-  {
-    "key": "ctrl+w",
-    "command": "editor.action.smartSelect.expand",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "cmd+w",
-    "command": "extension.multiCommand.execute",
-    "interval": 30,
-    "args": {
-      "sequence": [
-        {
-          "command": "vscode-neovim.send",
-          "args": "i"
-        },
-        "editor.action.smartSelect.expand"
-      ]
-    },
-    "when": "neovim.mode == normal && editorTextFocus"
-  },
-  {
-    "key": "cmd+w",
-    "command": "editor.action.smartSelect.expand",
-    "when": "neovim.mode != normal && editorTextFocus"
-  },
-  {
-    "key": "cmd+w",
-    "command": "-workbench.action.closeWindow",
-    "when": "!editorIsOpen && !multipleEditorGroups"
-  },
-  {
-    "key": "cmd+w",
-    "command": "-workbench.action.closeActiveEditor"
   },
   {
     "key": "ctrl+x",
