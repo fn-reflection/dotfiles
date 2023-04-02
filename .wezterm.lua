@@ -41,8 +41,8 @@ function flatten1(tbls) -- flatten 1 level
 end
 
 function day_of_week_in_japan(weeknum)
-	local days = { "日", "月", "火", "水", "木", "金", "土" }
-	return days[weeknum + 1]
+	local days = { "月", "火", "水", "木", "金", "土", "日" }
+	return days[weeknum]
 end
 
 -- https://open-meteo.com/en/docs
@@ -208,7 +208,7 @@ function create_powerlines(window, pane)
 				Text = string.format(
 					" %s(%s) %s ",
 					wezterm.strftime("%-m/%-d"),
-					day_of_week_in_japan(wezterm.strftime("%u")),
+					day_of_week_in_japan(tonumber(wezterm.strftime("%u"))),
 					wezterm.strftime("%H:%M:%S")
 				),
 			},
