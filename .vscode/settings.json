@@ -15,6 +15,9 @@
     "[json]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
+    "[log]": {
+        "editor.wordWrap": "off", // care about too long rows
+    },
     "[lua]": {
         "editor.defaultFormatter": "JohnnyMorganz.stylua"
     },
@@ -25,11 +28,11 @@
         "editor.formatOnSave": false,
         "files.trimFinalNewlines": false,
     },
-    "[log]": {
-        "editor.wordWrap": "off", // care about too long rows
-    },
     "[markdown]": {
         "files.trimTrailingWhitespace": false, // trailing space has semantic meaning
+    },
+    "[scss]": {
+        "editor.formatOnSave": false
     },
     "[tsv]": {
         "editor.insertSpaces": false, // tab has semantic meaning
