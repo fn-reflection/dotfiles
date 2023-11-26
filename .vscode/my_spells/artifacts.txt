@@ -1,4 +1,7 @@
+auxf
 Bitwarden
+btreemap
+chrono
 Cica
 classpath
 dbaeumer
@@ -6,6 +9,7 @@ dropboxd
 easymotion
 factorypath
 firewalld
+fuser
 gocryptfs
 handlekeys
 highlightedyank
@@ -17,17 +21,21 @@ keepass
 keepassxc
 lineinfile
 luahelper
+maplit
 mdmath
 Neovim
 nohl
 nvim
 otpauth
+pwdx
 Pylance
+rcvs
 rdbg
 remmina
 Ricty
 scrollback
 solargraph
+sqlx
 startuptime
 TOTP
 vimtutor
