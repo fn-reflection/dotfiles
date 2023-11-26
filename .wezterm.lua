@@ -238,6 +238,7 @@ return {
 	disable_default_key_bindings = true,
 	font = wezterm.font_with_fallback({ "FiraCode Nerd Font", "Cica" }),
 	font_size = 16.0,
+	hyperlink_rules = {},
 	keys = {
 		{
 			key = "Tab",
@@ -459,6 +460,11 @@ return {
 		timeout_milliseconds = 2000,
 	},
 	scrollback_lines = 200000,
+	unix_domains = {
+		{
+			name = "unix",
+		},
+	},
 	tab_max_width = 24,
 	use_dead_keys = false,
 	window_decorations = "RESIZE", -- no title bar
