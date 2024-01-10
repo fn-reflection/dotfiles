@@ -1,5 +1,10 @@
-## USE STARSHIP
-eval "$(starship init zsh)"
+## CUSTOMIZE PROMPT
+autoload -Uz vcs_info # use vcs_info
+setopt prompt_subst # allow $ expansion in prompt
+zstyle ':vcs_info:git:*' formats '%r %b'
+precmd () { vcs_info } # call vcs_info every showing prompt
+PS1='%F{red}%n%f %F{048}%/%f$ '
+RPROMPT='%F{blue}${vcs_info_msg_0_}%f'
 
 ## AUTO COMPLETION
 autoload -U compinit
