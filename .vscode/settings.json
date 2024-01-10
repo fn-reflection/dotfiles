@@ -21,6 +21,9 @@
     "[lua]": {
         "editor.defaultFormatter": "JohnnyMorganz.stylua"
     },
+    "[properties]": {
+        "editor.formatOnSave": false,
+    },
     "[python]": {
         "diffEditor.ignoreTrimWhitespace": false, // indent has semantic meaning
     },
@@ -50,6 +53,7 @@
     "debug.autoExpandLazyVariables": false, // true if I need eager load
     "debug.internalConsoleOptions": "openOnSessionStart", // from "openOnFirstSessionStart"
     "debug.openDebug": "openOnSessionStart", // from "openOnFirstSessionStart"
+    "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.maxComputationTime": 0,
     "diffEditor.renderSideBySide": false,
     "diffEditor.wordWrap": "off",
@@ -116,7 +120,12 @@
         }
     },
     "github.copilot.enable": {
-        "*": true
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "yaml": true,
+        "rust": true
     },
     "gitlens.mode.statusBar.enabled": false,
     "java.format.settings.profile": "GoogleStyle",
@@ -133,6 +142,7 @@
         ],
         "version": "0.2.0"
     },
+    "markdown.validate.enabled": true,
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
@@ -150,6 +160,18 @@
     "scss.lint.unknownAtRules": "ignore",
     "scss.validate": false,
     "search.showLineNumbers": true,
+    "shellformat.effectLanguages": [
+        "shellscript",
+        "dockerfile",
+        "dotenv",
+        "hosts",
+        "jvmoptions",
+        "ignore",
+        "gitignore",
+        "spring-boot-properties",
+        "azcli",
+        "bats"
+    ],
     "solargraph.checkGemVersion": false,
     "solargraph.diagnostics": true,
     "solargraph.formatting": true,
@@ -206,7 +228,6 @@
     "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.lua",
     "vscode-neovim.useCtrlKeysForInsertMode": false,
     "vscode-neovim.useCtrlKeysForNormalMode": false,
-    "window.zoomLevel": 0,
     "workbench.colorCustomizations": {
         "editorError.foreground": "#111111",
         "editorInfo.foreground": "#555555",
@@ -218,4 +239,5 @@
     },
     "workbench.editor.tabSizing": "shrink",
     "workbench.startupEditor": "none",
+    "window.zoomLevel": 1
 }
