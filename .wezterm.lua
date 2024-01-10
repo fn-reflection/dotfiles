@@ -233,9 +233,11 @@ end)
 return {
 	check_for_updates = false,
 	color_scheme = "Monokai Remastered",
+    colors = { scrollbar_thumb = '#888888' },
 	cursor_blink_rate = 500,
 	default_cursor_style = "BlinkingUnderline",
 	disable_default_key_bindings = true,
+    enable_scroll_bar = true,
 	font = wezterm.font_with_fallback({ "Cica" }),
 	font_size = 16.0,
 	hyperlink_rules = {},
