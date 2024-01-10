@@ -1,3 +1,4 @@
+activetab
 auxf
 Bitwarden
 btreemap
@@ -16,6 +17,7 @@ highlightedyank
 hlsearch
 incsearch
 ipynb
+katex
 KDBX
 keepass
 keepassxc
@@ -31,13 +33,16 @@ pwdx
 Pylance
 rcvs
 rdbg
+rehype
 remmina
 Ricty
 scrollback
+Shiki
 solargraph
 sqlx
 startuptime
 TOTP
+vfile
 vimtutor
 visualstar
 wezterm
