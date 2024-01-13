@@ -154,6 +154,7 @@
     "python.linting.pylintEnabled": true,
     "python.testing.pytestEnabled": true,
     "redhat.telemetry.enabled": false,
+    "rust-analyzer.check.command": "clippy",
     "rust-analyzer.diagnostics.disabled": [
         "unresolved-macro-call"
     ],
@@ -229,6 +230,7 @@
     "vscode-neovim.useCtrlKeysForInsertMode": false,
     "vscode-neovim.useCtrlKeysForNormalMode": false,
     "workbench.colorCustomizations": {
+        "debugConsole.warningForeground": "#999999",
         "editorError.foreground": "#111111",
         "editorInfo.foreground": "#555555",
         "editorWarning.foreground": "#000000"
