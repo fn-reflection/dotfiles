@@ -171,7 +171,13 @@ function styled_current_git_branch(current_dir)
 end
 
 function create_powerlines(window, pane)
-	local current_dir = (pane:get_current_working_dir() or ""):sub(8)
+	local current_dir
+	if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+		-- Windows: C:/Users/username/
+		current_dir = (pane:get_current_working_dir() or ''):sub(9)
+	else -- other: /home/username/
+		current_dir = (pane:get_current_working_dir() or ''):sub(8)
+	end
 	local daily_weather = wezterm.GLOBAL.daily_weather
 		or {
 			weathercode = { -1, -1, -1 },
