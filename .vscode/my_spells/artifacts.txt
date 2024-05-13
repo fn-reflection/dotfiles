@@ -10,11 +10,15 @@ dropboxd
 easymotion
 factorypath
 firewalld
+flate
 fuser
 gocryptfs
 handlekeys
 highlightedyank
 hlsearch
+imgcodecs
+imgproc
+imwrite
 incsearch
 ipynb
 katex
@@ -43,6 +47,7 @@ sqlx
 startuptime
 TOTP
 vfile
+videoio
 vimtutor
 visualstar
 wezterm
