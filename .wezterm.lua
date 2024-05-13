@@ -8,7 +8,6 @@ function enumerate(tbl, func) -- almost same as python's enumerate(map with inde
 	end
 	return t
 end
-
 -- https://gist.github.com/w13b3/5d8a80fae57ab9d51e285f909e2862e0
 function zip(...) -- almost same as python's zip
 	local idx, ret, args = 1, {}, { ... }
@@ -263,6 +262,18 @@ return {
 			action = wezterm.action.ToggleFullScreen,
 		},
 		{
+			key = "-",
+			mods = "CTRL",
+			action = wezterm.action.DecreaseFontSize,
+		},
+		{
+			key = "-",
+			mods = "ALT",
+			action = wezterm.action.SplitVertical({
+				domain = "CurrentPaneDomain",
+			}),
+		},
+		{
 			key = "1",
 			mods = "ALT",
 			action = wezterm.action.ActivateTab(0),
@@ -308,20 +319,8 @@ return {
 			action = wezterm.action.ActivateTab(8),
 		},
 		{
-			key = "-",
-			mods = "ALT",
-			action = wezterm.action.DecreaseFontSize,
-		},
-		{
-			key = "-",
-			mods = "SUPER",
-			action = wezterm.action.SplitVertical({
-				domain = "CurrentPaneDomain",
-			}),
-		},
-		{
 			key = "=",
-			mods = "ALT",
+			mods = "CTRL|SHIFT",
 			action = wezterm.action.IncreaseFontSize,
 		},
 		{
@@ -430,19 +429,29 @@ return {
 		},
 		{
 			key = "\\",
-			mods = "SHIFT|SUPER",
+			mods = "ALT",
 			action = wezterm.action.SplitHorizontal({
-				domain = "CurrentPaneDomain",
+				domain = 'CurrentPaneDomain'
 			}),
 		},
 		{
 			key = "LeftArrow",
 			mods = "ALT",
-			action = wezterm.action.MoveTabRelative(-1),
+			action = wezterm.action.ActivateTabRelative(-1),
 		},
 		{
 			key = "RightArrow",
 			mods = "ALT",
+			action = wezterm.action.ActivateTabRelative(1),
+		},
+		{
+			key = "LeftArrow",
+			mods = "ALT|SHIFT",
+			action = wezterm.action.MoveTabRelative(-1),
+		},
+		{
+			key = "RightArrow",
+			mods = "ALT|SHIFT",
 			action = wezterm.action.MoveTabRelative(1),
 		},
 		{
