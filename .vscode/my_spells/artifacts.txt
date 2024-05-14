@@ -1,4 +1,5 @@
 activetab
+appender
 auxf
 Bitwarden
 btreemap
@@ -32,6 +33,8 @@ mdmath
 Neovim
 nohl
 nvim
+opentelemetry
+otlp
 otpauth
 pwdx
 Pylance
