@@ -1,6 +1,8 @@
 activetab
 appender
 auxf
+bfill
+bimap
 Bitwarden
 btreemap
 chrono
@@ -36,6 +38,7 @@ nvim
 opentelemetry
 otlp
 otpauth
+protobuf
 pwdx
 Pylance
 rcvs
